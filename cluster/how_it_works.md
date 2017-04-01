@@ -4,6 +4,8 @@
 The worker processes are spawned using the [`child_process.fork()`][] method,
 so that they can communicate with the parent via IPC and pass server
 handles back and forth.
+worker进程可通过child_process.folk()方法产生，进程通过IPC与主进程通信，同时传递服务句柄。
+
 
 The cluster module supports two methods of distributing incoming
 connections.
@@ -55,6 +57,3 @@ continue to accept connections.  If no workers are alive, existing connections
 will be dropped and new connections will be refused.  Node.js does not
 automatically manage the number of workers for you, however.  It is your
 responsibility to manage the worker pool for your application's needs.
-
-
-
